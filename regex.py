@@ -12,7 +12,9 @@ pattern = r""
 text = "The Cat sat on the mat."
 match = re.search(pattern, text)
 print(match.group() if match else "No match")
+'''
 
+'''
 # 3. Match any three-letter word ending with 'at'.
 pattern = r""
 text = "The cat sat on the mat."
