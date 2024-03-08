@@ -7,7 +7,6 @@ match = re.search(pattern, text)
 print(match.group() if match else "No match")
 
 '''
-
 # 2. Match "cat" regardless of its case.
 pattern = r""
 text = "The Cat sat on the mat."
