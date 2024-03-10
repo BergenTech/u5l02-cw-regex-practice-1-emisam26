@@ -121,124 +121,122 @@ text = "The the cat sat sat on the the mat."
 matches = re.findall(pattern, text)
 print(matches)
 
-'''
 # 21. Match simple email addresses.
-pattern = r"\b(\w)+@(\w)+\.(\w{2,3})\b"
+pattern = r"\b[\w.-]+@[\w.-]+\.\w+\b"
 text = "Contact us at info@example.com."
 matches = re.findall(pattern, text)
 print(matches)
 
-'''
 # 22. Match web URLs.
-pattern = r""
+pattern = r"\bhttps?://www\.+[\w.-]+\.\w+\b"
 text = "Visit https://www.example.com for more info."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 23. Match phone numbers in various formats.
-pattern = r""
+pattern = r"\(?\d{3}\)?-?\s?\d{3}-\d{4}"
 text = "Call 123-456-7890 or (123) 456-7890."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 24. Case-insensitive match of "python".
-pattern = r""
+pattern = r"python"
 text = "Python is fun. python is powerful."
-matches = re.findall(pattern, text)
+matches = re.findall(pattern, text, re.IGNORECASE)
 print(matches)
 
 # 25. Split a string at each space or comma.
-pattern = r""
+pattern = r"[,\s]+"
 text = "The,quick brown,fox jumps"
 words = re.split(pattern, text)
 print(words)
 
 # 26. Replace "cat" with "dog".
-pattern = r""
+pattern = r"cat"
 text = "The cat sat on the mat."
 new_text = re.sub(pattern, "dog", text)
 print(new_text)
 
 # 27. Match "color" or "colour" without capturing the group.
-pattern = r""
+pattern = r"colou?r"
 text = "Both color and colour are correct."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 28. Match "John" only if followed by "Smith".
-pattern = r""
+pattern = r"John(?=\sSmith)"
 text = "John Smith vs. John Doe"
 matches = re.findall(pattern, text)
 print(matches)
 
 # 29. Match "Smith" only if preceded by "John".
-pattern = r""
+pattern = r"(?<=John\s)Smith"
 text = "John Smith vs. John Doe"
 matches = re.findall(pattern, text)
 print(matches)
 
 # 30. Match any Unicode letter.
-pattern = r""
+pattern = r"\w+"
 text = "Résumé"
 matches = re.findall(pattern, text, re.UNICODE)
 print(matches)
 
 # 31. Match hexadecimal numbers (e.g., #a3c113).
-pattern = r""
+pattern = r"#(\w{6})"
 text = "The color code is #a3c113."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 32. Match words containing 'ing'.
-pattern = r""
+pattern = r"\w*ing"
 text = "Playing, singing, and swimming are fun."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 33. Match sentences ending with a question mark.
-pattern = r""
+pattern = r".*\?$"
 text = "What is your name? How old are you?"
 matches = re.findall(pattern, text)
 print(matches)
 
 # 34. Match all words starting with 's' and ending with 'e'.
-pattern = r""
+pattern = r"s\w*e"
 text = "Store and sell are similar words."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 35. Match all HTML tags.
-pattern = r""
+pattern = r"\</?\w*\>"
 text = "<html><head><title>Title</title></head></html>"
 matches = re.findall(pattern, text)
 print(matches)
 
 # 36. Match all Twitter handles (e.g., @username).
-pattern = r""
+pattern = r"@\w+"
 text = "Follow me on Twitter @example_user."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 37. Match dates in the format YYYY-MM-DD.
-pattern = r""
+pattern = r"\d{4}-\d{2}-\d{2}"
 text = "Today's date is 2023-01-01."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 38. Match all words longer than 5 letters.
-pattern = r""
+pattern = r"\w{6,}"
 text = "Regular expressions are powerful."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 39. Match all floating-point numbers.
-pattern = r""
+pattern = r"-?\d+\.\d+"
 text = "The temperature is -3.14 degrees."
 matches = re.findall(pattern, text)
 print(matches)
 
 # 40. Match all XML tags.
-pattern = r""
+pattern = r"\<\w+\>"
 text = "<note><to>User</to><from>Admin</from></note>"
 matches = re.findall(pattern, text)
 print(matches)
